@@ -87,22 +87,7 @@ This project is a React application that integrates with the [Reqres API](https:
 - React Router DOM
 - CSS (custom styles)
 
-## Folder Structure
 
-```
-src/
-├── components/
-│   ├── UserCard.js
-├── pages/
-│   ├── Login/
-│   │   ├── Login.js
-│   │   ├── Login.css
-│   ├── Users/
-│   │   ├── Users.js
-│   │   ├── Users.css
-├── App.js
-├── index.js
-```
 
 ## API Endpoints
 
