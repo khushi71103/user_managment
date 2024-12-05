@@ -7,13 +7,16 @@
   height: 100vh;
   padding: 20px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 h1 {
   margin-bottom: 20px;
   color: #333;
+  font-size: 2rem; /* Scales better across devices */
 }
 
+/* Search Input */
 .search-input {
   padding: 10px;
   margin-bottom: 20px;
@@ -29,18 +32,24 @@ h1 {
   border-color: #84fab0;
 }
 
+/* User Card Container */
 .user-card-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px; /* Ensure it doesn't stretch too far on large screens */
 }
 
+/* No Results Message */
 .no-results {
   color: #f44336;
   font-size: 18px;
+  margin-top: 10px;
 }
 
+/* Pagination */
 .pagination {
   margin-top: 20px;
   display: flex;
@@ -63,10 +72,11 @@ h1 {
   background-color: #ccc;
 }
 
-.pagination button:hover {
+.pagination button:hover:not(:disabled) {
   background-color: #8fd3f4;
 }
 
+/* Logout Button */
 .logout-btn {
   margin-top: 20px;
   padding: 10px 20px;
@@ -94,14 +104,17 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000; /* Ensures it appears above other elements */
 }
 
 .edit-modal-content {
   background: white;
   padding: 30px;
   border-radius: 10px;
-  width: 400px;
+  width: 90%;
+  max-width: 400px; /* Responsive max width */
   text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .edit-modal-content input {
@@ -138,4 +151,68 @@ h1 {
 
 .edit-modal-content button:last-of-type:hover {
   background-color: #e53935;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .user-card-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 90%; /* Adjust width on smaller screens */
+  }
+
+  .pagination button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .logout-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .pagination button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .logout-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .edit-modal-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .edit-modal-content input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .edit-modal-content button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
 }

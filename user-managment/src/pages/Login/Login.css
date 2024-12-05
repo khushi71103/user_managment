@@ -1,5 +1,4 @@
-/* src/pages/Login/Login.css */
-
+/* Overall body styles */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -11,21 +10,23 @@ body {
     overflow: hidden;
   }
   
+  /* Login Page Container */
   .login-page {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 0 100px; /* Ensures spacing from the left and right on smaller screens */
+    padding: 20px; /* Added padding for smaller screens */
     box-sizing: border-box;
   }
   
+  /* Login Box */
   .login-box {
     background: white;
-    padding: 40px 50px; /* Increased padding for better spacing */
-    width: 100%; /* Full width of the available space */
-    max-width: 500px; /* Limits the width on larger screens */
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 500px;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -43,6 +44,7 @@ body {
     }
   }
   
+  /* Headings and Text */
   .login-box h2 {
     font-size: 2rem;
     color: #333;
@@ -54,6 +56,7 @@ body {
     margin-bottom: 30px;
   }
   
+  /* Input Fields */
   .input-container {
     position: relative;
     margin-bottom: 20px;
@@ -73,6 +76,7 @@ body {
     border-bottom: 2px solid #84fab0;
   }
   
+  /* Input underline animation */
   .input-underline {
     position: absolute;
     bottom: 0;
@@ -89,6 +93,7 @@ body {
     transform: scaleX(1);
   }
   
+  /* Login Button */
   .login-button {
     background: linear-gradient(120deg, #84fab0, #8fd3f4);
     color: white;
@@ -108,9 +113,53 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
   
+  /* Error Message */
   .error {
     color: red;
     font-size: 0.9rem;
     margin-top: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-box {
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 90%; /* Adjust width to fit smaller screens */
+    }
+  
+    .login-box h2 {
+      font-size: 1.8rem;
+    }
+  
+    .login-box p {
+      font-size: 0.95rem;
+    }
+  
+    .login-button {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+      border-radius: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-box {
+      padding: 20px;
+      max-width: 100%;
+    }
+  
+    .login-box h2 {
+      font-size: 1.5rem;
+    }
+  
+    .login-box p {
+      font-size: 0.85rem;
+    }
+  
+    .login-button {
+      padding: 8px 12px;
+      font-size: 0.85rem;
+    }
   }
   
